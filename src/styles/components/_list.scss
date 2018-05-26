@@ -34,6 +34,24 @@
   }
 }
 
+.list-item-completed {
+  border: 1px solid darken($off-white, 7%);
+  border-top: none;
+  color: $dark-grey;
+  background: $completed-green;
+  text-decoration-line: line-through;
+  display: flex;
+  flex-direction: column;
+  padding: $s-size;
+  transition: background .3s ease;
+  @media (min-width: $desktop-breakpoint) {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $m-size;
+  }
+}
+
 .list-item--message {
   align-items: center;
   color: $grey;
@@ -60,4 +78,9 @@
     margin: 0;
     padding-left: $s-size;
   }
+}
+
+.list-item-button{
+  border: none;
+  background: $off-white;
 }
